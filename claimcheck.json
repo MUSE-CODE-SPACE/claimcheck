@@ -1,0 +1,9 @@
+{
+  "checks": {
+    "tests": "node --test test/*.test.mjs",
+    "build": "node -e \"import('./bin/claimcheck.mjs')\"",
+    "types": null,
+    "lint": null
+  },
+  "endpoints": []
+}
