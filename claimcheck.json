@@ -1,7 +1,7 @@
 {
   "checks": {
     "tests": "node --test test/*.test.mjs",
-    "build": "node -e \"import('./bin/claimcheck.mjs')\"",
+    "build": "node --check bin/claimcheck.mjs && node --check src/verify.mjs",
     "types": null,
     "lint": null
   },

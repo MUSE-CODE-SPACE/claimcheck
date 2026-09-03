@@ -1,0 +1,8 @@
+{
+  "checks": {
+    "build": "node -e \"process.exit(1)\""
+  },
+  "endpoints": [
+    { "url": "https://api.example.invalid/health", "expect": 200 }
+  ]
+}
