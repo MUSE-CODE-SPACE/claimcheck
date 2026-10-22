@@ -3,9 +3,33 @@
   "version": "0.1.0",
   "description": "Check what your coding agent said it did. Runs the claims, reports which ones hold.",
   "type": "module",
-  "bin": { "claimcheck": "./bin/claimcheck.mjs" },
-  "files": ["bin", "src", "skill", "README.md"],
-  "engines": { "node": ">=18" },
+  "bin": {
+    "claimcheck": "./bin/claimcheck.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skill",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "license": "MIT",
-  "keywords": ["ai-agents", "agent-skill", "claude-code", "verification", "qa"]
+  "keywords": [
+    "ai-agents",
+    "agent-skill",
+    "claude-code",
+    "verification",
+    "qa"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check bin/claimcheck.mjs && node --check src/verify.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MUSE-CODE-SPACE/claimcheck.git"
+  }
 }

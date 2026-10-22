@@ -53,9 +53,10 @@ CORS 설정을 들여다봤습니다. `/health` 를 한 번 열어 봤으면 3�
 ## 설치
 
 ```bash
-npm install -g claimcheck
+npm install -g github:MUSE-CODE-SPACE/claimcheck
 ```
 
+npm 레지스트리의 `claimcheck` 는 이 프로젝트와 무관한 다른 패키지이므로 GitHub 에서 직접 설치합니다.
 Node 18 이상이면 됩니다. 의존성은 없습니다.
 
 ## 사용
@@ -96,8 +97,12 @@ claimcheck --json      # 결과를 JSON 으로
 
 ```bash
 mkdir -p .claude/skills/claimcheck
-cp node_modules/claimcheck/skill/SKILL.md .claude/skills/claimcheck/
+curl -fsSL https://raw.githubusercontent.com/MUSE-CODE-SPACE/claimcheck/main/skill/SKILL.md \
+  -o .claude/skills/claimcheck/SKILL.md
 ```
+
+프로젝트에 `npm install -D github:MUSE-CODE-SPACE/claimcheck` 로 설치했다면
+`node_modules/claimcheck/skill/SKILL.md` 를 복사해도 됩니다.
 
 ## 한계
 
@@ -110,4 +115,4 @@ cp node_modules/claimcheck/skill/SKILL.md .claude/skills/claimcheck/
 
 ## 라이선스
 
-MIT
+MIT — [LICENSE](LICENSE)
